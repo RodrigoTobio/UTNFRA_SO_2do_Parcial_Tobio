@@ -1,0 +1,36 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 23:56:12,742 p=12295 u=rodrigo n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-17 23:56:12,986 p=12295 u=rodrigo n=ansible | PLAY [all] **************************************************************************
+2024-11-17 23:56:13,001 p=12295 u=rodrigo n=ansible | TASK [Gathering Facts] **************************************************************
+2024-11-17 23:56:13,262 p=12295 u=rodrigo n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nrodrigo@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 23:56:14,386 p=12295 u=rodrigo n=ansible | ok: [localhost]
+2024-11-17 23:56:14,402 p=12295 u=rodrigo n=ansible | TASK [2do_parcial : Crear directorio para alumno] ***********************************
+2024-11-17 23:56:14,723 p=12295 u=rodrigo n=ansible | changed: [localhost]
+2024-11-17 23:56:14,731 p=12295 u=rodrigo n=ansible | TASK [2do_parcial : Crear directorio para equipo] ***********************************
+2024-11-17 23:56:15,023 p=12295 u=rodrigo n=ansible | changed: [localhost]
+2024-11-17 23:56:15,032 p=12295 u=rodrigo n=ansible | TASK [2do_parcial : Generar archivo datos_alumno.txt desde template] ****************
+2024-11-17 23:56:15,664 p=12295 u=rodrigo n=ansible | changed: [localhost]
+2024-11-17 23:56:15,672 p=12295 u=rodrigo n=ansible | TASK [2do_parcial : Generar archivo datos_equipo.txt desde template] ****************
+2024-11-17 23:56:16,108 p=12295 u=rodrigo n=ansible | changed: [localhost]
+2024-11-17 23:56:16,115 p=12295 u=rodrigo n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] ****************
+2024-11-17 23:56:16,409 p=12295 u=rodrigo n=ansible | changed: [localhost]
+2024-11-17 23:56:16,423 p=12295 u=rodrigo n=ansible | PLAY RECAP **************************************************************************
+2024-11-17 23:56:16,423 p=12295 u=rodrigo n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 23:56:16,424 p=12295 u=rodrigo n=ansible | localhost                  : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
